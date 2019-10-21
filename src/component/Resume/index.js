@@ -21,6 +21,23 @@ const ProgressStyle = {
 };
 
 export const Resume = () => {
+
+  const onClickHandler = (e) => {
+    console.log('download function trigged!!!')
+    const downLink = document.createElement('a');
+    downLink.href = './resume/CHARLES YEON CHUL CHOI_Resume.pdf';
+    downLink.download = 'CHARLES YEON CHUL CHOI_Resume';
+    downLink.style.display = 'none';
+    
+    document.body.appendChild(downLink);
+
+    downLink.click();
+
+    document.body.removeChild(downLink);
+
+    console.log('download function done!!!')
+  };
+
   return (
     <div name='Resume' style={divStyle}>
       <Header style={{ fontSize: '30px', marginBottom: '5px' }} dividing>RESUME</Header>
@@ -233,9 +250,10 @@ export const Resume = () => {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Button basic color='blue' size='large'>Download CV</Button>
+          <Button basic color='blue' size='large' onClick={onClickHandler}>Download CV</Button>
         </Grid.Row>
       </Grid>
+
     </div>
   );
 }
