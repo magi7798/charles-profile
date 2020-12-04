@@ -167,7 +167,7 @@ export const Resume = () => {
                     </Segment>
 
                     <Grid.Column width={11}>
-                      <h3>Web Developer</h3>
+                      <h3>Support Staff</h3>
                       <ul>
                         <li>Designed the main webpage of the Korean website introducing Seneca College to Korean prospective students using HTML and Photoshop.</li>
                         <li>Updated Seneca College news daily.</li>
@@ -221,31 +221,31 @@ export const Resume = () => {
               <Label basic style={{ border: 'none' }}>
                 <Icon name='html5' size='large'> HTML5</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={90} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='css3 alternate' size='large'> CSS3</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={80} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='js square' size='large'> Javascript</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={90} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='react' size='large'> React.js</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={90} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='node js' size='large'> Node.js</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={75} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='node js' size='large'> Express.js</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={75} progress='percent' size='small' color='teal' style={ProgressStyle} />
               <Label basic style={{ border: 'none' }}>
                 <Icon name='database' size='large'> MongoDB</Icon>
               </Label>
-              <Progress percent={30} progress='percent' size='small' color='teal' style={ProgressStyle} />
+              <Progress percent={75} progress='percent' size='small' color='teal' style={ProgressStyle} />
             </Header>
           </Grid.Column>
         </Grid.Row>

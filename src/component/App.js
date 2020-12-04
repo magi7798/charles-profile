@@ -6,7 +6,7 @@ import { Home } from './Home';
 import { AboutMe } from './AboutMe';
 import { Resume } from './Resume';
 import { Portfolio } from './Portfolio';
-import { Contact } from './Contact';
+import Contact from './Contact';
 
 const App = () => {
   return (

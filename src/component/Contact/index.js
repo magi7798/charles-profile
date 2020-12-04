@@ -2,27 +2,42 @@ import React from 'react';
 import { Icon, Label, Segment, Grid, Container, Header, Form, Input, TextArea, Button } from 'semantic-ui-react';
 
 import GoogleApiWrapper from './GoogleMapApi.js';
+import emailjs from 'emailjs-com';
 
 const divStyle = {
   margin: '30px 80px 50px 40px'
 }
 
 const ContainerStyle = {
-  textAlign: 'right', 
+  textAlign: 'right',
   marginBottom: '40px',
   fontSize: '15px',
   fontWeight: '300',
   color: 'darkgrey'
 }
 
-export const Contact = () => {
+const Contact = () => {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('email sent!');
+
+    emailjs.sendForm('service_7gaxlpa', 'template_profileApp', e.target, 'user_3r6pdmx73cHRxSZ4brNWM')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset();
+  }
+
   return (
     <div name='Contact' style={divStyle}>
       <Header style={{ fontSize: '30px', marginBottom: '5px' }} dividing>CONTACT</Header>
       {/*Google Map Api*/}
       <Container style={ContainerStyle} fluid>
         Get in Touch
-      </Container>
+        </Container>
       <Grid doubling centered>
         <Grid.Row style={{ marginBottom: '10px' }}>
           <Grid.Column>
@@ -64,33 +79,45 @@ export const Contact = () => {
           <Grid.Row className='grid-message'>
             <br></br>
             <Grid.Column>
-              <Form size='big'>
+              <Form size='big' onSubmit={sendEmail}>
                 <Grid verticalAlign='middle' columns={2} centered>
                   <Grid.Row>
                     <Grid.Column width={8}>
                       <Form.Field
                         id='form-input-control-full-name'
+                        name='fullName'
+                        type='text'
                         control={Input}
                         placeholder='Full name'
+                      // onChange={(e) => this.handleChange(e)}
                       />
                       <Form.Field
                         id='form-input-control-email'
+                        name='email'
+                        type='email'
                         control={Input}
                         placeholder='Email Address'
+                      // onChange={(e) => this.handleChange(e)}
                       />
                       <Form.Field
                         id='form-input-control-subject'
+                        name='subject'
+                        type='text'
                         control={Input}
                         placeholder='Subject'
+                      // onChange={(e) => this.handleChange(e)}
                       />
                     </Grid.Column>
 
                     <Grid.Column width={8}>
                       <Form.Field
                         id='form-textarea-control-opinion'
+                        name='message'
+                        type='text'
                         control={TextArea}
                         placeholder='Message'
                         style={{ height: '180px' }}
+                      // onChange={(e) => this.handleChange(e)}
                       />
                     </Grid.Column>
                   </Grid.Row>
@@ -109,3 +136,5 @@ export const Contact = () => {
     </div>
   );
 }
+
+export default Contact;
